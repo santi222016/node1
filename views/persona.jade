@@ -1,0 +1,13 @@
+extends layout
+block content
+	script(type='text/javascript' src='/javascripts/app.js')
+	h1= title
+	p Bien venido #{title}
+	.myView
+		input(type='text', data-bind='value:name')
+		br
+		span(data-bind='text:name')
+	
+	ul
+	for p in per
+		li #{p.nombre} , #{p.edad}
